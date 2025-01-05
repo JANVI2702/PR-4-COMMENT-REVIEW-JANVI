@@ -40,7 +40,7 @@ function Feedback() {
         setFeedback({});
 
 
-        // reviewsSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+        reviewsSectionRef.current.scrollIntoView({ behavior: 'smooth' });
     };
 
     const handlerating = (rating) => {
@@ -79,7 +79,7 @@ function Feedback() {
                                     <div className="mt-2">
                                         <h6 className='text-gray'>Your Email</h6>
                                         <div className="input-group mb-3">
-                                            <input type="email" name='email' value={feedback.email || ''} onChange={handlechange} className="form-control  bg-gray border-black" aria-label="Username" aria-describedby="basic-addon1" placeholder='enter email' />
+                                            <input type="email" name='email' value={feedback.email || ''} onChange={handlechange} className="form-control  bg-gray border-black text-light" aria-label="Username" aria-describedby="basic-addon1" placeholder='enter email' />
                                         </div>
 
                                         <div>
