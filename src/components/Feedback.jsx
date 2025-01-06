@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { IoStar } from "react-icons/io5";
 import AOS from "aos";
-import 'aos/dist/aos.css';
+import "aos/dist/aos.css";
 
 function Feedback() {
     const [feedback, setFeedback] = useState({});
@@ -118,12 +118,11 @@ function Feedback() {
                                     data-aos-duration="1000">
                                     <div>
                                         <h6 className='text-gray'>From: {item.email}</h6>
-                                        <p className='bg-dark'>{[...Array(item.rating)].map((_, i) => (
-                                            <IoStar key={i} className="text-warning bg-dark fs-3 mx-1" />
+                                        <p className='bg-dark'>
+                                            {[...Array(5)].map((_, i) => (
+                                            <IoStar key={i} color={item.rating >= i+1 ? "gold" : "gray"} className="bg-dark fs-3 mx-1" />
                                         ))}
-                                            {[...Array(5 - item.rating)].map((_, i) => (
-                                                <IoStar key={i} className="text-muted fs-3 mx-1" />
-                                            ))}</p>
+                                        </p>
                                     </div>
                                     <div className="card-body p-0">
                                         <p className='bg-dark text-light'>{item.feedback}</p>
